@@ -2,19 +2,24 @@
  * 
  * by Raul Castro
  */
+"use strict"
 
 
- const content = null || document.getElementById('container')
+import Home from "./views/pages/Home.js"
 
- const dataInserida = null || document.getElementById('resposta')
+const header = null || document.getElementById('header');
+
+const content = null || document.getElementById('container');
+
+const footer = null || document.getElementById('footer');
 
 
- content.innerHTML = `<div class="mt-5"> 
- <h3>
- Digite sua data de nascimento e mostrarei a tua idade:
- </h3> 
 
- <input type="date" name="inputData" class="form-control col-4" />
+header.innerHTML=`<div><h1>Topo</h1></div>`
 
- </div>`
+
+content.innerHTML=Home.render();
+
+
+ footer.innerHTML=`<div><p>Rodapé</p></div>`;
 
