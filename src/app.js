@@ -6,6 +6,8 @@
 
 
 import Home from "./views/pages/Home.js"
+import Footer from './views/components/Footer.js'
+import Nav from './views/components/Nav.js'
 
 const header = null || document.getElementById('header');
 
@@ -15,11 +17,11 @@ const footer = null || document.getElementById('footer');
 
 
 
-header.innerHTML=`<div><h1>Topo</h1></div>`
+header.innerHTML=Nav.render();
 
 
 content.innerHTML=Home.render();
 
 
- footer.innerHTML=`<div><p>Rodapé</p></div>`;
+ footer.innerHTML=Footer.render();
 
