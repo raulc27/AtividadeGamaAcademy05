@@ -1,6 +1,6 @@
 const Utils = {
     //parser URL
-    parseRequestURL: () => {
+    parseRequestURL: async () => {
         let url = location.hash.slice(1).toLocaleLowerCase() || '/'
         let r=url.split('/') 
         let request = {

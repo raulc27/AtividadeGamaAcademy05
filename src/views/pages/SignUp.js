@@ -1,5 +1,5 @@
 let SignUp = {
-    render: () => {
+    render: async () => {
         let view = `
             <div>
                 <h1>View de nossa SignUp</h1>
@@ -8,7 +8,7 @@ let SignUp = {
 
         return view
     },
-    after_render: ()=>{
+    after_render: async ()=>{
 
     }
 }

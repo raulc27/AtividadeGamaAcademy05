@@ -1,5 +1,5 @@
 let Home = {
-    render: () => {
+    render: async () => {
         let view = `
             <div>
                 <h1>View de nossa home</h1>
@@ -8,7 +8,7 @@ let Home = {
 
         return view
     },
-    after_render: ()=>{
+    after_render: async ()=>{
 
     }
 }

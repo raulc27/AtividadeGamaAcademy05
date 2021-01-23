@@ -1,5 +1,5 @@
 let Error404 = {
-    render: () => {
+    render: async () => {
         let view = `
             <div>
                 <h1>rolou um '404' aqui...</h1>
@@ -8,7 +8,7 @@ let Error404 = {
 
         return view
     },
-    after_render: ()=>{
+    after_render: async ()=>{
 
     }
 }

@@ -1,5 +1,5 @@
 let Dash = {
-    render: () => {
+    render: async () => {
         let view = `
             <div>
                 <h1>View de nossa DASH</h1>
@@ -8,7 +8,7 @@ let Dash = {
 
         return view
     },
-    after_render: ()=>{
+    after_render: async ()=>{
 
     }
 }

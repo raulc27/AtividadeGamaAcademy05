@@ -25,13 +25,13 @@ const footer = null || document.getElementById('footer');
 
 
 
-header.innerHTML=Nav.render();
+//header.innerHTML= await Nav.render();
 
 
-content.innerHTML=Home.render();
+//content.innerHTML=Home.render();
 
 
- footer.innerHTML=Footer.render();
+ //footer.innerHTML=  await Footer.render();
 
 
 
@@ -43,16 +43,32 @@ content.innerHTML=Home.render();
       '/':Home,
       '/signup':SignUp,
       '/login':Login,
-      'dashboard':Dash
+      '/dashboard':Dash
   }
 
 // Código do roteador. Pegar a URL e verificar na nossa lista de routes e renderizar 
 
-const router = () => {
-    let request = Utils.parseRequestURL();
-    let parseURL = (request.resource ? '/' + request.resource : '/') + (request.verb ? '/' + request.verb:'')
+const router = async () => {
+    
 
-    let page = routes[parseURL] ? routes[parseURL] : Error404
+   header.innerHTML = await Nav.render();
+   footer.innerHTML = await Footer.render();
 
-    content.innerHTML = page.render()
+    let request =  Utils.parseRequestURL();
+    let parseURL =  (request.resource ? '/' + request.resource : '/') + (request.verb ? '/' + request.verb:'')
+
+    let page =  routes[parseURL] ? routes[parseURL] : Error404
+    content.innerHTML = await page.render()
+    await page.after_render();
+  
 }
+
+
+//Observar as mudanças na URL
+window.addEventListener('hashchange',router)
+
+//carreganento da página
+
+console.log(router())
+
+window.addEventListener('load',router());

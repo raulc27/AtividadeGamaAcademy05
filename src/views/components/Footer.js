@@ -1,12 +1,16 @@
 let Footer = {
-    render : () => {
+    render : async () => {
         let view = `
-            <div><p>View do nosso Footer</p></div>
+        <footer class="footer">
+        <div class="container ">
+          <span class="text-muted ">by Raul Castro</span>
+        </div>
+      </footer>
         `
 
         return view
     },
-    after_render:()=>{
+    after_render: async ()=>{
 
     }
  }
