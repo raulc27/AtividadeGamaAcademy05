@@ -18,12 +18,3 @@
 
  </div>`
 
-dataInserida.innerHTML=`<div>
-
-<p>
-
-A sua idade é ${reposta}
-
-</p>
-
-</div>`
