@@ -16,6 +16,7 @@ import SignUp from './views/pages/SignUp.js';
 import Error404 from './views/pages/Error404.js';
 
 import Utils from './service/Utils.js';
+import baseURL from './service/baseURL.js'
 
 const header = null || document.getElementById('header');
 
@@ -52,9 +53,11 @@ const router = async () => {
     
 
    header.innerHTML = await Nav.render();
+   await Nav.after_render();
    footer.innerHTML = await Footer.render();
+   await Footer.after_render();
 
-    let request =  Utils.parseRequestURL();
+    let request =  await Utils.parseRequestURL();
     let parseURL =  (request.resource ? '/' + request.resource : '/') + (request.verb ? '/' + request.verb:'')
 
     let page =  routes[parseURL] ? routes[parseURL] : Error404
