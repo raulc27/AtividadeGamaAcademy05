@@ -1,8 +1,8 @@
-let Dash = {
+let Error404 = {
     render: () => {
         let view = `
             <div>
-                <h1>View de nossa DASH</h1>
+                <h1>rolou um '404' aqui...</h1>
             </div>
         `
 
@@ -14,4 +14,4 @@ let Dash = {
 }
 
 
-export default Dash;
+export default Error404;
