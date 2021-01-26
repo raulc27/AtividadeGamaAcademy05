@@ -1,3 +1,5 @@
+import baseURL from '../../service/baseURL.js';
+
 let Login = {
     render: async () => {
         let view = `
@@ -29,6 +31,33 @@ let Login = {
         return view
     },
     after_render: async ()=>{
+
+        document.getElementById('login_start').addEventListener('click',()=>{
+            let nameUser = document.getElementById('username').value,
+            userPass = document.getElementById('passlogin').value
+
+
+
+            if(nameUser.length>=4 && userPass.length>=4 ){
+
+
+                axios.post(`${baseURL}login`,{
+                    usuario:nameUser,
+                    senha:userPass
+                },{
+                    headers:{"Content-Type":"application/json"}
+                })
+                .then(res => {
+                    console.log(res.data)
+                    localStorage.setItem('@token', res.data.token)
+                    sessionStorage.setItem('@token', res.data.token)
+                    Cookies.set('@token', res.data.token, {expires: 1})
+                })
+
+            } 
+
+
+        })
 
     }
 }
