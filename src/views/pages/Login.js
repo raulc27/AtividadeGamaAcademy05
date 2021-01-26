@@ -22,7 +22,7 @@ let Login = {
         <input type="text" id="username" placeholder="USERNAME" class="form-control mt-3"/>
         <input type="password" id="password" placeholder="password" class="form-control mt-1" />
 
-        <button class="btn btn-outline-dark form-control mt-5" type-"button"><b>Fazer login</b></button>
+        <button class="btn btn-outline-dark form-control mt-5" type-"button" id="login_start"><b>Fazer login</b></button>
         </for>
     
     </div>
@@ -34,7 +34,7 @@ let Login = {
 
         document.getElementById('login_start').addEventListener('click',()=>{
             let nameUser = document.getElementById('username').value,
-            userPass = document.getElementById('passlogin').value
+            userPass = document.getElementById('password').value
 
 
 
@@ -57,6 +57,7 @@ let Login = {
                     //sessionStorage.setItem('@token', res.data.token)
                    // Cookies.set('@token', res.data.token, {expires: 1})
                     localStorage.setItem('userDataAccount',JSON.stringify(res.data))
+                    window.location.replace('#/dashboard')
                 
 
                     }

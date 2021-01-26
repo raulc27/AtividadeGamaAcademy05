@@ -4,8 +4,8 @@ let Dash = {
     render: async () => {
 
         let userData = JSON.parse(localStorage.getItem('userDataAccount'));
-        const {usuario,} = userData 
-        let IsAuth = await isAuthenticated(!localStorage.getItem('@toekn'),'login');
+        const {usuario,conta} = userData 
+        let IsAuth = await isAuthenticated(!localStorage.getItem('@token'),'login');
 
         let view = `
             <div>
