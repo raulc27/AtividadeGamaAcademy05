@@ -48,12 +48,19 @@ let Login = {
                     headers:{"Content-Type":"application/json"}
                 })
                 .then(res => {
-                    console.log(res.data)
+
+                    if(res.status===200){
+
+                        console.log(res.data)
+                    window.location.replace('#/dashboard')
                     localStorage.setItem('@token', res.data.token)
-                    sessionStorage.setItem('@token', res.data.token)
-                    Cookies.set('@token', res.data.token, {expires: 1})
+                    //sessionStorage.setItem('@token', res.data.token)
+                   // Cookies.set('@token', res.data.token, {expires: 1})
                     localStorage.setItem('userDataAccount',JSON.stringify(res.data))
-                })
+                
+
+                    }
+                    })
 
             } 
 
