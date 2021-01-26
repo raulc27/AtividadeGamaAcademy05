@@ -1,3 +1,10 @@
+let isAuthenticated = async (token, redirect)=>{
+    if(token){
+        window.location.replace(`#/${redirect}`)
+    }
+}
+
+
 let Dash = {
     render: async () => {
         let view = `
