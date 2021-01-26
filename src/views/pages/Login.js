@@ -52,6 +52,7 @@ let Login = {
                     localStorage.setItem('@token', res.data.token)
                     sessionStorage.setItem('@token', res.data.token)
                     Cookies.set('@token', res.data.token, {expires: 1})
+                    localStorage.setItem('userDataAccount',JSON.stringify(res.data))
                 })
 
             } 

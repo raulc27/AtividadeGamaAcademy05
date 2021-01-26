@@ -1,8 +1,3 @@
-let isAuthenticated = async (token, redirect)=>{
-    if(token){
-        window.location.replace(`#/${redirect}`)
-    }
-}
 
 
 let Dash = {
@@ -19,6 +14,7 @@ let Dash = {
 
     }
 }
+
 
 
 export default Dash;

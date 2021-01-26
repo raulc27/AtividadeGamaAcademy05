@@ -1,3 +1,5 @@
+import isAuthenticated from '../../service/isAuth.js'
+
 let Nav = {
     render: async () => {
         let view = `
@@ -17,9 +19,15 @@ let Nav = {
             <li class="nav-item">
               <a class="nav-link" href="/#/signup">Sign Up!</a>
             </li>
+
+           
+                
             <li class="nav-item">
             <a class="nav-link" href="/#/dashboard">Dashboard</a>
+            
           </li>
+        
+          <button class="btn btn-outline-light" id="destroy_session">Desconectar</button>
           
           </ul>
         </div>
@@ -29,6 +37,11 @@ let Nav = {
         return view
     },
     after_render: async ()=>{
+
+      document.getElementById('destroy_session').addEventListener('click',function(){
+        localStorage.clear()
+        window.location.replace('#/login')
+           })
 
     }
 }
