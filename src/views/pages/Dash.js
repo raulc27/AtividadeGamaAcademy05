@@ -1,5 +1,26 @@
 import isAuthenticated from '../../service/isAuth.js';
+import baseURL from '../../service/baseURL';
 
+
+const RequestDataAccount = async () => {
+
+
+    let dataUser = JSON.parse(localStorage.getItem('userDataAccount'))
+
+    let {token,usuario:{login}}=dataUser 
+
+    let headersDefault = {
+        headers:{
+            'Content-Type':'application/json',
+            'authorization':token
+        }
+    }
+
+
+
+}
+
+const response = await axios.get(`${baseURL}lancamentos/planos-conta?login=${login}`, headersDefault)
 let Dash = {
     render: async () => {
 

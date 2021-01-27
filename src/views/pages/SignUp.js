@@ -82,7 +82,7 @@ let SignUp = {
               },{
             
                     headers:{
-                        'Content-Type':'applications/json'
+                        'Content-Type':'application/json'
                     }
             
             })
