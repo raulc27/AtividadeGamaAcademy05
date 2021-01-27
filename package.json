@@ -3,7 +3,7 @@
   "author": "",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/dist/index.js",
   "scripts": {
     "server": "live-server src --verbose",
     "test": "echo \"Error: no test specified\" && exit 1",
