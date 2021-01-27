@@ -1,6 +1,6 @@
 import isAuthenticated from '../../service/isAuth.js';
 import baseURL from '../../service/baseURL';
-import DayName from '../../service;DayName.js'
+import DayName from '../../service/DayName.js'
 import MonName from '../../service/MonName.js'
 
 
