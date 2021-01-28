@@ -62,7 +62,7 @@ let SignUp = {
           let  nameVal= document.getElementById('username').value
           let  emailVal= document.getElementById('email').value
           let  passwordVal= document.getElementById('password').value
-          CPF = document.getElementById('cpf').value.replace(/[^\d]/g, "")
+          let CPF = document.getElementById('cpf').value.replace(/[^\d]/g, "")
           console.log(CPF)
 
         
@@ -76,8 +76,8 @@ let SignUp = {
 
                 cpf:CPF,
                 login:username,
-                passowrd:passwordVal,
-                name:nameVal
+                senha:passwordVal,
+                nome:nameVal
 
               },{
             
