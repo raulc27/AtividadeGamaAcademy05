@@ -70,8 +70,11 @@ const router = async () => {
 //Observar as mudanças na URL
 window.addEventListener('hashchange',router)
 
+window.addEventListener('load',router);
+
 //carreganento da página
 
-console.log(router())
+//console.log(router())
 
-window.addEventListener('load',router());
+//window.addEventListener('load',router());
+
